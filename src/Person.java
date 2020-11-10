@@ -1,6 +1,5 @@
 public class Person {
     //    first_name,last_name,company_name,address,city,county,state,zip,phone1,phone2,email,web
-    private String fullName;
     private String firstName;
     private String lastName;
     private String companyName;
@@ -13,8 +12,10 @@ public class Person {
     private String phone2;
     private String email;
     private String web;
-    public Person(String fullName, String city, String email) {
-        this.fullName = fullName;
+
+    public Person(String firstName, String lastName, String city, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.city = city;
         this.email = email;
     }
@@ -81,5 +82,10 @@ public class Person {
 
     public String getWeb() {
         return web;
+    }
+
+    @Override
+    public String toString() {
+        return firstName + " " + lastName + " " + city + " " + email + "\n";
     }
 }
