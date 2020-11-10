@@ -1,5 +1,6 @@
 public class Person {
-//    first_name,last_name,company_name,address,city,county,state,zip,phone1,phone2,email,web
+    //    first_name,last_name,company_name,address,city,county,state,zip,phone1,phone2,email,web
+    private String fullName;
     private String firstName;
     private String lastName;
     private String companyName;
@@ -12,6 +13,11 @@ public class Person {
     private String phone2;
     private String email;
     private String web;
+    public Person(String fullName, String city, String email) {
+        this.fullName = fullName;
+        this.city = city;
+        this.email = email;
+    }
 
     public Person(String firstName, String lastName, String companyName, String address, String city, String county, String state, int zip, String phone1, String phone2,
                   String email, String web) {
