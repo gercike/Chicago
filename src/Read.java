@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Read {
     public Read() {
     }
-    public static void read() throws FileNotFoundException {
+    public static ArrayList<Person> read() throws FileNotFoundException {
         ArrayList<Person>persons = new ArrayList<>();
         Scanner sc = new Scanner(new File("us-500.csv"));
         for (int i = 0; sc.hasNext(); i++) {
@@ -18,5 +18,6 @@ public class Read {
             Person p = new Person(fullName,city,email);
             persons.add(p);
         }
+        return persons;
     }
 }
