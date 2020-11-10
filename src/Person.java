@@ -3,6 +3,11 @@ public class Person {
     private String firstName;
     private String lastName;
     private String companyName;
+
+    public String getFullName() {
+        return fullName;
+    }
+
     private String address;
     private String city;
     private String county;
